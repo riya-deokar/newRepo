@@ -12,20 +12,11 @@ public class Dolphin extends GameCharacter
      * Act - do whatever the Dolphin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-
-    public void act()
-    {
-        moveAround(); 
-        turnAtEdge();
-        randomTurn();
-        lookForCatch();     
-    }
-
     public void moveAround() // allows object to move across the screen 
     {
         move (5); 
-    }    
-
+    }   
+    
     public void turnAtEdge() // allows object to turn if it reaches the edge of the world so it does not get stuck
     {
         turn ((int)(Math.random()*5)); 
@@ -46,5 +37,40 @@ public class Dolphin extends GameCharacter
             eat(Fish.class);
         }
     }
+  
+    public void userControlledMove() // allows user to move object 
+    {
+        if(Greenfoot.isKeyDown("up"))
+        {
+            move(20);
+        }
+        if(Greenfoot.isKeyDown("down"))
+        {
+            move(-20);
+        }
+    }
+    
+    public void userControlledTurn () // allow user to turn main character 
+    {
+       if(Greenfoot.isKeyDown("right"))
+       {
+           turn(7);
+       }
+       if(Greenfoot.isKeyDown("left"))
+       {
+           turn(-7);
+       }
+    }
+    
+    public void act()
+    {
+        //moveAround(); 
+        //turnAtEdge();
+        //randomTurn();
+        lookForCatch();    
+        userControlledMove(); 
+        userControlledTurn(); 
+    }
 }
+
 
