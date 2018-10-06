@@ -8,14 +8,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Dolphin extends GameCharacter
 {
+    Score score = new Score();  
     /**
      * Act - do whatever the Dolphin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public void act() 
+    {
+        //moveAround(); 
+        //turnAtEdge();
+        //randomTurn();
+        lookForCatch();     
+        userControlledMove();
+        userControlledTurn();
+    }
+    
     public void moveAround() // allows object to move across the screen 
     {
         move (5); 
-    }   
+    }  
     
     public void turnAtEdge() // allows object to turn if it reaches the edge of the world so it does not get stuck
     {
@@ -60,16 +71,6 @@ public class Dolphin extends GameCharacter
        {
            turn(-7);
        }
-    }
-    
-    public void act()
-    {
-        //moveAround(); 
-        //turnAtEdge();
-        //randomTurn();
-        lookForCatch();    
-        userControlledMove(); 
-        userControlledTurn(); 
     }
 }
 

@@ -17,7 +17,7 @@ public class Shark extends GameCharacter
         moveAround(); 
         turnAtEdge();
         randomTurn();
-        lookForCatch();     
+        lookForCatch();   
     }
 
     public void moveAround() // allows object to move across the screen 
