@@ -1,14 +1,13 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Dolphin here.
+ * Main character 
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class Dolphin extends GameCharacter
 {
-    Score score = new Score();  
     /**
      * Act - do whatever the Dolphin wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -45,10 +44,13 @@ public class Dolphin extends GameCharacter
     {
         if(isTouching(Fish.class))
         {
-            eat(Fish.class);
+            eat(Fish.class); 
+            World myWorld = getWorld(); 
+            CatchWorld catchworld = (CatchWorld)myWorld; 
+            Counter counter = catchworld.getCounter();  
+            counter.addTotal(); 
         }
     }
-  
     public void userControlledMove() // allows user to move object 
     {
         if(Greenfoot.isKeyDown("up"))

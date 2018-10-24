@@ -1,7 +1,7 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Shark here.
+ * This chraacter eats main character
  * 
  * @author (your name) 
  * @version (a version number or a date)

@@ -1,7 +1,8 @@
 import greenfoot.*;  // (Actor, World, Greenfoot, GreenfootImage)
 
 public class CatchWorld extends World
-{
+{ 
+    Counter counter = new Counter(); 
     /**
      * Create the crab world (the beach). Our world has a size 
      * of 560x560 cells, where every cell is just 1 pixel.
@@ -11,10 +12,13 @@ public class CatchWorld extends World
         super(800, 700, 1);
         addObject(); 
     }
+    public Counter getCounter()
+    {
+        return counter; 
+    }
     public void addObject()
-    {   
-        Counter counter = new Counter(); 
-        addObject(counter, 100, 100);
+    {  
+        addObject(counter, 50, 30);
         
         Dolphin dodo = new Dolphin();
         addObject(dodo, (int)(800*Math.random()), (int)(700*Math.random()));
