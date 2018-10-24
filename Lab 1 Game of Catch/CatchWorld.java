@@ -1,5 +1,10 @@
 import greenfoot.*;  // (Actor, World, Greenfoot, GreenfootImage)
-
+/**
+ * Main character 
+ * 
+ * @author (Riya Deokar) 
+ * @version (10/23/18)
+ */
 public class CatchWorld extends World
 { 
     Counter counter = new Counter(); 

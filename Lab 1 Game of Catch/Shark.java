@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * This chraacter eats main character
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Riya Deokar) 
+ * @version (10/23/18)
  */
 public class Shark extends GameCharacter
 {
