@@ -21,6 +21,18 @@ public class CatchWorld extends World
     {
         return counter; 
     }
+    public void act()
+    {
+        int numberOfFish = getObjects(Fish.class).size();
+        int numberOfDolphin = getObjects(Dolphin.class).size(); 
+        if(numberOfFish == 0)
+        {
+            showText("You Win", 400, 300); 
+        } else if (numberOfDolphin == 0)
+        {
+            showText("You Lose", 400, 300); 
+        }
+    }
     public void addObject()
     {  
         addObject(counter, 50, 30);

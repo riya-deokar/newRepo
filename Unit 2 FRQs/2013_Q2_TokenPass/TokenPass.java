@@ -18,7 +18,11 @@ public class TokenPass
      */
     public TokenPass(int playerCount)
     {
-        /* to be implemented in part (a) */
+        board=new int[playerCount];
+        for(int x=0; x<playerCount; x++){
+            board[x]=(int)(Math.random()*10 + 1);
+        currentPlayer=(int)(playerCount*Math.random());
+        }
     }
     
     /**
@@ -33,7 +37,17 @@ public class TokenPass
      */
     public void distributeCurrentPlayerTokens()
     {
-        /* to be implemented in part (b) */
+        int numTokens=board[currentPlayer];
+        board[currentPlayer] = 0; 
+        int find=currentPlayer + 1;
+            for(int y=numTokens; y>0; y--){
+            if(find == board.length)
+            {
+                find = 0;
+            }
+            board[find]++;
+            find++;
+        }
     }
     
     //There may be instance variables, constructors, and methodes that are 
