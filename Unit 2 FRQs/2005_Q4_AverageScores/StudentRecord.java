@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class StudentRecord here.
  *
@@ -23,7 +22,12 @@ public class StudentRecord
      */
     public double average(int first, int last)
     {
-        /* to be implemented in part (a)*/
+        double sum = 0.0; 
+        for (int n=first; n<=last; n++)
+        {
+            sum =+ scores[n]; 
+        }
+        return sum/(last-first+1);
     }
     
     /**
@@ -33,7 +37,14 @@ public class StudentRecord
      */
     public boolean hasImproved()
     {
-        /* to be implemented in part (b) */
+        for (int n=0; n<scores.length-1; n++)
+        {
+            if (scores[n+1] < scores[n])
+            {
+                return false;
+            }   
+        }
+        return true; 
     }
     
     /**
@@ -44,6 +55,13 @@ public class StudentRecord
      */
     public double finalAverage()
     {
-        /* to be implemented in part (c) */
+        if (hasImproved())
+        {
+            return average(scores.length/2, scores.length-1);
+        }
+        else
+        {
+            return average(0, scores.length-1);
+        }
     }
 }
