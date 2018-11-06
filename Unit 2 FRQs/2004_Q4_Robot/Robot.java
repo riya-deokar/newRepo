@@ -26,7 +26,7 @@ public class Robot
      */
     public boolean forwardMoveBlocked()
     {
-        /* to be implemented in part (a) */
+        return (!facingRight && pos==0) || (facingRight && pos==hall.length-1); 
     }
     
     /**
@@ -36,7 +36,19 @@ public class Robot
      */
     public void move()
     {
-        /* to be implemented in part (b)*/
+        if (hall[pos] > 0)
+        {
+            hall[pos]--;
+            if (hall[pos] == 0)
+            {
+                if (forwardMoveBlocked())
+                facingRight = !facingRight;
+                else if (facingRight)
+                pos++;
+                else
+                pos--;
+            }
+        }
     }
     
     /**
@@ -45,7 +57,13 @@ public class Robot
      */
     public int clearHall()
     {
-        /* to be implemented in part (c) */
+        int count = 0; 
+        while (!hallIsClear())
+        {
+            move();
+            count++;
+        }
+        return count; 
     }
     
     /**
@@ -54,10 +72,9 @@ public class Robot
      */
     private boolean hallIsClear()
     {
-        /* implementation not shown in question*/
-        for(int i=0; i<hall.length; i++)
+        for(int n=0; n<hall.length; n++)
         {
-            if(hall[i]!=0)
+            if(hall[n]!=0)
             {
                 return false;
             }
