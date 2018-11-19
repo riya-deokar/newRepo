@@ -18,7 +18,7 @@ public class Driver
         Swimmer Fefe = new Swimmer(true, "butterfly"); 
         
         Mike.workout(2); 
-        Ally.workout(3.5);
+        Ally.workout(3.5, "walking");
         Fefe.workout(3); 
         
         double mhr = Mike.getHours(); 
@@ -31,5 +31,13 @@ public class Driver
         Fefe.printSwimStroke(); 
         
         //mike.printSwimStroke(); - does not exist in class 
+        System.out.println ("Mike's workout"); 
+        Mike.printWorkoutSummary(); 
+        System.out.println ("Ally's workout"); 
+        Ally.printWorkoutSummary(); 
+        System.out.println ("Fefe's workout"); 
+        Fefe.printWorkoutSummary(); 
+       
+        
     }
 }

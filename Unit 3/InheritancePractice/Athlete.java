@@ -35,5 +35,30 @@ public boolean getInjury()
 {
     return hasInjury; 
 } 
+/** 
+ * write a method called printWorkoutSummary
+ * that is void and prints out a statement with the number of our the athlete
+ * has worked out and if they are currently injured
+ * Athlete has worked out -- and id injured: true/false 
+ */
+public void printWorkoutSummary() 
+{
+    System.out.println ("Athlete has worked out" +getHours() + "are they injures:" + getInjury()); 
+} 
+/**
+     * change the workout method so it also lets me enter what kind of workout 
+     * overoading - loads more parameters into the mehthod or changes parameter types 
+     * increases hoursPractice and prints "workout type": -- 
+     */
+    
+public void workout(double time, String type)
+{
+    hoursPractice+=time;  
+    System.out.println("Workout type"+type);
 }
+    
+}
+
+
+
 
