@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Nov 24 11:23:12 PST 2018
+#Sat Nov 24 12:13:56 PST 2018
 readme.name=@README
 class.Key.image=white-key.png
 target2.naviview.expanded=true
@@ -41,7 +41,7 @@ target1.editor.x=153
 target2.width=80
 class.Key.superclass=greenfoot.Actor
 target1.width=80
-mainWindow.y=-11
+mainWindow.y=0
 mainWindow.height=1046
 mainWindow.x=-11
 class.Piano.superclass=greenfoot.World

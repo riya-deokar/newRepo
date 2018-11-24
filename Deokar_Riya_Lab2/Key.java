@@ -28,7 +28,7 @@ public class Key extends Actor
      */
     public void act()
     {
-        playKey();
+        playKey(); 
     }
 
     public void playKey() // diffrenciates if the Key is down or up by using images and plays a sound when the Key is pressed 
