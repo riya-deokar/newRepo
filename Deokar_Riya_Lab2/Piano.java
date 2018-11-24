@@ -29,8 +29,7 @@ public class Piano extends World
         //addObject(new Key("e", "2e.wav", "white-key.png", "white-key-down.png"), 150, 100);
         //addObject(new Key("f", "2f.wav", "white-key.png", "white-key-down.png"), 180, 100);
         placeKey(); 
-    }
-    private void placeKey() // using a while loop and taking into consideration the paramters constructed 
+    }    private void placeKey() // using a while loop and taking into consideration the paramters constructed to place and create a key 
     {
         int x = 0 ; 
         while(x < whiteKeys.length)
