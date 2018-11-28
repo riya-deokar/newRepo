@@ -31,15 +31,15 @@ public class Advance extends Ticket
     public double getPrice()
     {
         // put your code here
-        double cost; 
+        double price; 
         if(daysAdvance >= 10)
         {
-            cost = 30; 
+            price = 30; 
         }
         else
         {
-            cost = 40; 
+            price = 40; 
         }
-        return cost/2; 
+        return price; 
     }
 }

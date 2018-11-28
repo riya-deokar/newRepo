@@ -1,4 +1,3 @@
-
 /**
  * Write a description of class StudentAdvance here.
  *
@@ -8,7 +7,7 @@
 public class StudentAdvance extends Advance 
 {
     // instance variables - replace the example below with your own
-    private int daysAdvance;
+    
 
     /**
      * Constructor for objects of class StudentAdvance
@@ -17,8 +16,6 @@ public class StudentAdvance extends Advance
     {
         // initialise instance variables
         super(days); 
-        days = 0;
-        daysAdvance = days; 
     }
 
     /**
@@ -29,15 +26,12 @@ public class StudentAdvance extends Advance
      */
     public double getPrice()
     {
-        double student; 
-        if(daysAdvance >= 10)
-        {
-            student = 30; 
-        }
-        else
-        {
-            student = 40; 
-        }
-        return student; 
+        double price; 
+        price = super.getPrice()/2; 
+        return price; 
+    }
+    public String toString()
+    {
+        return super.toString()+"(student ID required)"; 
     }
 }
