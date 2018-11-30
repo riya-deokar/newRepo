@@ -1,6 +1,6 @@
 public abstract class Animal 
 {
-    //fields
+    //field
     
     //constructors
     
