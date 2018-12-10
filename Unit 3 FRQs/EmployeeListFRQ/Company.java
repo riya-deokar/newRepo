@@ -31,7 +31,16 @@ public class Company
         The employeeIsEligible returns true if they are eligible to retire or 
         false if they are not eligible.
         */
-       
+        if (retireAge==e.getAge() && retireYears==e.getYearsOnJob()
+        || retireAge==e.getAge() && retireSalary==e.getSalary()
+        || retireYears==e.getYearsOnJob() && retireSalary==e.getSalary())
+        {
+            return true; 
+        }
+        else 
+        {
+            return false; 
+        }
     }
 
     /**
