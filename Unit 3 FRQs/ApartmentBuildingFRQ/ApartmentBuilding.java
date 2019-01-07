@@ -8,8 +8,7 @@
 public class ApartmentBuilding extends Building 
 {
     // instance variables - replace the example below with your own
-    private double[] aptWattHours;
-    private String adressApartment; 
+    private double[] aptWattHours; 
     private int numberApartments; 
 
     /**
@@ -18,8 +17,8 @@ public class ApartmentBuilding extends Building
     public ApartmentBuilding(String ad, int number)
     {
         super(ad);   
-        numberApartments = number; 
-        double[] aptWattHours = new double[numberApartments]; 
+        numberApartments = number;
+        aptWattHours = new double[numberApartments];
     }
 
     /**
@@ -35,7 +34,8 @@ public class ApartmentBuilding extends Building
        {
             sumHours += aptWattHours[i];  
        }
-       return sumHours*getRate(); 
+       System.out.println(super.getRate()*sumHours); 
+       return super.getRate()*sumHours; 
     }
     public void setApartmentHours( double[] hours )
     {
