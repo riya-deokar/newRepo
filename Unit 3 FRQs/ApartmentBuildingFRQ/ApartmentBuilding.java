@@ -17,7 +17,7 @@ public class ApartmentBuilding extends Building
      */
     public ApartmentBuilding(String ad, int number)
     {
-        super(ad);  
+        super(ad);   
         numberApartments = number; 
         double[] aptWattHours = new double[numberApartments]; 
     }
@@ -30,6 +30,18 @@ public class ApartmentBuilding extends Building
      */
     public double amtOwed( )
     {
-        
+       double sumHours=0;
+       for(int i=0; i<aptWattHours.length; i++)
+       {
+            sumHours += aptWattHours[i];  
+       }
+       return sumHours*getRate(); 
+    }
+    public void setApartmentHours( double[] hours )
+    {
+       for(int i=0; i<aptWattHours.length; i++)
+       {
+          aptWattHours[i] = hours[i];
+       }
     }
 }
