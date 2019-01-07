@@ -34,7 +34,6 @@ public class ApartmentBuilding extends Building
        {
             sumHours += aptWattHours[i];  
        }
-       System.out.println(super.getRate()*sumHours); 
        return super.getRate()*sumHours; 
     }
     public void setApartmentHours( double[] hours )

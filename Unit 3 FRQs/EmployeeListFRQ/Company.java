@@ -82,8 +82,7 @@
              */
             int y=0;
             int x;
-            Employee[]tempList = new Employee[empList.length-numRetireEligible];
-            System.out.println(tempList.length+"tempList"); 
+            Employee[]tempList = new Employee[empList.length-numRetireEligible];            
             for(x=0; x<empList.length; x++)
             {
                 if(employeeIsEligible(empList[x])==false)
@@ -91,16 +90,12 @@
                        tempList[y]=empList[x];
                        y++;
                    } 
-            }  
+            }   
+            empList = new Employee[tempList.length]; 
             for(x=0; x<tempList.length; x++)
             {
                 empList[x]=tempList[x]; 
             }
-            for(x=tempList.length; x<empList.length; x++)
-            {
-                empList[x]=null; 
-            }
-            System.out.println(empList.length+"empList"); 
         }
 
     
