@@ -11,9 +11,9 @@ public class ATMTransaction extends Transaction
     private String location;
 
     //constructor
-    public ATMTransaction(int act, char dw, double bal, String loc)
+    public ATMTransaction(int act, String dw, double amt, String loc)
     { 
-        super(act, dw, bal);
+        super(act, dw, amt);
         location = loc; 
     }
     

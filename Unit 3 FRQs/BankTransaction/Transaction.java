@@ -9,11 +9,11 @@ public class Transaction
 {
     //fields
     private int accountNum;
-    private char transactionType;
+    private String transactionType;
     private double amount;
     
     //constructor
-    public Transaction(int act, char dw, double a)
+    public Transaction(int act, String dw, double amt)
     {
         accountNum = act; 
         transactionType = dw; 
@@ -25,12 +25,12 @@ public class Transaction
     { 
          return accountNum;
     }
-    public char getTransactionType () 
+    public String getTransactionType () 
     { 
          return transactionType; 
     }
     public double getTransactionAmount () 
     { 
-         return balance; 
+         return amount; 
     }
 }

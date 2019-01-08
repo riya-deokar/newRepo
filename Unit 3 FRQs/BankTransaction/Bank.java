@@ -41,11 +41,15 @@ public class Bank{
      * by the transaction. */
     public void doOneTransaction ( Transaction trans )
     {
-        if(trans.getTransactionType()=='d')
+        int index=getIndex(trans.getAccountNumber()); 
+        if(trans.getTransactionType()=="d")
         {
-            doDeposit (); 
+            accounts[index].doDeposit(trans.getTransactionAmount()); 
         }
-        
+        if(trans.getTransactionType()=="w")
+        {
+            accounts[index].doWithdrawal(trans.getTransactionAmount()); 
+        }
     }
 }
 
