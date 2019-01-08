@@ -41,7 +41,11 @@ public class Bank{
      * by the transaction. */
     public void doOneTransaction ( Transaction trans )
     {
-        //code to be implemented in part C
+        if(trans.getTransactionType()=='d')
+        {
+            doDeposit (); 
+        }
+        
     }
 }
 
