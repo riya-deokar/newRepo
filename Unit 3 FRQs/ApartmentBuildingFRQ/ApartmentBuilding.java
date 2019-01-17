@@ -18,7 +18,7 @@ public class ApartmentBuilding extends Building
     {
         super(ad);   
         numberApartments = number;
-        aptWattHours = new double[numberApartments];
+        aptWattHours = new double[number];
     }
 
     /**
@@ -30,11 +30,11 @@ public class ApartmentBuilding extends Building
     public double amtOwed( )
     {
        double sumHours=0;
-       for(int i=0; i<aptWattHours.length; i++)
+       for(int i=0; i<=numberApartments-1; i++)
        {
             sumHours += aptWattHours[i];  
        }
-       return super.getRate()*sumHours; 
+       return getRate()*sumHours; 
     }
     public void setApartmentHours( double[] hours )
     {

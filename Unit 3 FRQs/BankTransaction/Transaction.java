@@ -2,8 +2,8 @@
  * The Transaction class will perform a Bank
  * Transaction of depositing or withdrawing money.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @Riya
+ * @version: (01/17/18)
  */
 public class Transaction
 {

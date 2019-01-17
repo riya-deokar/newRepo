@@ -87,15 +87,10 @@
             {
                 if(employeeIsEligible(empList[x])==false)
                    {
-                       tempList[y]=empList[x];
-                       y++;
+                       tempList[y++]=empList[x]; 
                    } 
             }   
-            empList = new Employee[tempList.length]; 
-            for(x=0; x<tempList.length; x++)
-            {
-                empList[x]=tempList[x]; 
-            }
+            empList = tempList; 
         }
 
     

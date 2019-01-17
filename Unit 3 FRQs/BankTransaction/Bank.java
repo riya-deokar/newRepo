@@ -1,6 +1,6 @@
 /**
- * @author: (Your Name)
- * @version: (Date)
+ * @author: Riya 
+ * @version: (01/17/18)
  * BankTransaction FRQ work
  * Use the FRQ question to work through the code
  * for this FRQ.
