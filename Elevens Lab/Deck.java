@@ -30,14 +30,15 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) 
     {
-        for (int s=0; s<5; s++)
+        for (int x=0; x<suits.length; x++)
         {
-            
-            for (int r=0; r<14; r++)
+            for (int i=0; i<ranks.length; i++)
             {
-                
+                Card d1 = new Card(ranks[i], suits[x], values[i]);
+                cards.add(d1); 
             }
         }
+        size = cards.size(); 
     }
     
      /**
