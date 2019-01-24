@@ -61,7 +61,7 @@ public class Deck {
      * @return the number of undealt cards in this deck.
      */
     public int size() {
-        //size = (ranks.length-1)*(suits.length-1); 
+        size = cards.size(); 
     }
 
     /**
