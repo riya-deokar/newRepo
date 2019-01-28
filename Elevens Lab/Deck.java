@@ -30,15 +30,16 @@ public class Deck {
      */
     public Deck(String[] ranks, String[] suits, int[] values) 
     {
+        cards = new ArrayList <Card>(); 
         for (int x=0; x<suits.length; x++)
         {
             for (int i=0; i<ranks.length; i++)
             {
-                Card d1 = new Card(ranks[i], suits[x], values[i]);
-                cards.add(d1); 
+                Card c = new Card(ranks[i], suits[x], values[i]);
+                cards.add(c); 
             }
         }
-        size = cards.size(); 
+        size = cards.size();
     }
     
      /**
@@ -55,13 +56,14 @@ public class Deck {
             return false; 
         }
     }
-
+    
     /**
      * Accesses the number of undealt cards in this deck.
      * @return the number of undealt cards in this deck.
      */
-    public int size() {
-        size = cards.size(); 
+    public int size() 
+    {
+        return size; 
     }
 
     /**
@@ -78,13 +80,14 @@ public class Deck {
      *         previously dealt.
      */
     public Card deal() {
-        if (vards.isEmpty)
+        if (size==0)
         {
             return null; 
         }
         else 
         {
-            Deck.remove(deck.length-1);
+            size=size-1; 
+            return cards.get(size); 
         }
     }
     
