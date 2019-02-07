@@ -34,6 +34,7 @@ public class ArrayDriver
             System.out.println(); 
         }
         
+        /*
         //enhanced for loop through 2D array 
         for(int[] row: myNums)
         {
@@ -43,6 +44,7 @@ public class ArrayDriver
             }
             System.out.println(); 
         }
+        */
         
         //calculate the average of the value in the 2D arrays 
         //print the average
@@ -54,7 +56,65 @@ public class ArrayDriver
                 x += myNums[r][c];
             }
         }
-        System.out.println("average:"+x/(myNums.length*myNums[0].length)); 
-        //create an array that is a transpose of myNums; 
+        System.out.println("Average:"+x/(myNums.length*myNums[0].length)); 
+        
+        
+        //create an array that is a transpose of myNums
+        //1. create a new array 
+        int[][] transpose = new int[myNums[0].length][myNums.length];
+        //2. fill the transpose 
+        for(int r=0; r<myNums.length; r++)
+        {
+            for(int c=0; c<myNums[r].length; c++)
+            {
+               transpose[c][r] = myNums[r][c]; 
+               //transpose[r][c] = myNums[c][r]; 
+            }
+        }
+        //3. print transpose 
+        for(int[] row: transpose)
+        {
+            for(int num: row)
+            {
+                System.out.print(num+"\t");
+            }
+            System.out.println(); 
+        }
+        
+        
+        /**
+         * turn the transpose 2D array into a 1D array. fiilled in colum-major order  --> colum loop on the outside 
+         */
+        //1. initialize 1D array
+        //colum major 
+        int loc = 0; 
+        int[]oneD = new int[transpose.length*transpose[0].length];
+        //2. exchange
+        for(int c=0; c<transpose[0].length; c++)
+        {
+            for(int r=0; r<transpose.length; r++)
+            {
+                oneD[loc] = transpose[r][c];
+                loc++; 
+                //3. fill in 1D array with values from 2D array 
+            }
+        }
+        //row major 
+        /*
+        for(int r=0; r<transpose; r++)
+        {
+            for(int c=0; c<transpose[0].length; c++)
+            {
+                oneD[loc] = transpose[c][r];
+                loc++; 
+                //3. fill in 1D array with values from 2D array 
+            }
+        }
+        */
+        //4. prinit array 
+        for (int num:oneD)
+        {
+            System.out.print(num+"\t"); 
+        }
     }
 }
